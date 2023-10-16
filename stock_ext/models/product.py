@@ -34,6 +34,7 @@ class ProductProduct(models.Model):
     print_enabled = fields.Boolean(string='Print enabled')
     print_queue = fields.Integer(string='Print queue')
     scale_created = fields.Boolean(string='Scale created')
+    quant_create = fields.Boolean(string='Quant create')
 
     @api.onchange('product_label_id')
     def onchange_product_label_id(self):
@@ -58,13 +59,14 @@ class ProductProduct(models.Model):
     def create(self, vals_list):
         result = super(ProductProduct, self).create(vals_list)
         for piece in result:
-            if piece.scale_created:
-                piece.name = piece.barcode
-                piece.categ_id = self.env.ref('stock_ext.product_category_piece')
+            if piece.quant_create:
                 self.env['stock.quant'].create({
                     'product_id': piece.id,
                     'quantity': 1,
                     'location_id': self.env.ref('stock.stock_location_stock').id})
+            if piece.scale_created:
+                piece.name = piece.barcode
+                piece.categ_id = self.env.ref('stock_ext.product_category_piece')
         return result
 
     @api.depends('lot_id', 'lot_id.cost_2', 'lot_id.additional_usd', 'weight')
