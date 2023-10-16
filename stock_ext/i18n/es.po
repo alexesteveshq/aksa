@@ -1,0 +1,395 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_ext
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-17 10:50+0000\n"
+"PO-Revision-Date: 2023-09-17 10:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_ext
+#: model_terms:ir.ui.view,arch_db:stock_ext.report_delivery_document_inherit
+msgid "<strong>Barcode</strong>"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,help:stock_ext.field_product_product__detailed_type
+#: model:ir.model.fields,help:stock_ext.field_product_template__detailed_type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Un producto almacenable es un producto para el que gestiona existencias. La aplicación Inventario debe estar instalada.\n"
+"Un producto consumible es un producto para el que no se gestionan las existencias.\n"
+"Un servicio es un producto no material."
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_lot__acquisition_date
+msgid "Acquisition date"
+msgstr "Fecha de adquisición"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_lot__additional_usd
+msgid "Additional USD"
+msgstr "USD adicional"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__barcode
+#: model:ir.model.fields,field_description:stock_ext.field_stock_move_line__product_barcode
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__barcode
+#: model:ir.model.fields,field_description:stock_ext.field_stock_quant__barcode
+#: model:ir.model.fields,field_description:stock_ext.field_stock_return_picking_line__product_barcode
+msgid "Barcode"
+msgstr "Código"
+
+#. module: stock_ext
+#: model_terms:ir.ui.view,arch_db:stock_ext.view_production_lot_form
+msgid "Calculate Weight"
+msgstr "Calcular Peso"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__standard_price
+msgid "Cost"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_lot__purchase_cost
+msgid "Cost 1 (purchase)"
+msgstr "Costo 1 (compra)"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_lot__cost_2
+msgid "Cost 2 (logistic)"
+msgstr "Costo 2 (logistica)"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__cost_3
+#: model_terms:ir.ui.view,arch_db:stock_ext.view_production_lot_form
+msgid "Cost 3"
+msgstr "Costo 3"
+
+#. module: stock_ext
+#: model:ir.actions.server,name:stock_ext.action_create_from_piece
+msgid "Create from piece"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.actions.server,name:stock_ext.action_create_piece_product
+msgid "Create products"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_piece_variant__create_uid
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_piece_variant__create_date
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_piece_variant__display_name
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_piece_variant__id
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__id
+msgid "ID"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_lot__import_cost
+msgid "Import Cost %"
+msgstr "Costo de importación (%)"
+
+#. module: stock_ext
+#: model:ir.model.fields,help:stock_ext.field_product_product__standard_price
+msgid ""
+"In Standard Price & AVCO: value of the product (automatically computed in AVCO).\n"
+"        In FIFO: value of the next unit that will leave the stock (automatically computed).\n"
+"        Used to value the product when the purchase cost is not known (e.g. inventory adjustment).\n"
+"        Used to compute margins on sale orders."
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,help:stock_ext.field_product_product__barcode
+#: model:ir.model.fields,help:stock_ext.field_stock_move_line__product_barcode
+#: model:ir.model.fields,help:stock_ext.field_stock_quant__barcode
+#: model:ir.model.fields,help:stock_ext.field_stock_return_picking_line__product_barcode
+msgid "International Article Number used for product identification."
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_piece_variant____last_update
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_piece_variant__write_uid
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_piece_variant__write_date
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__list_price
+msgid "List price"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__lot_id
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__lot_id
+msgid "Lot"
+msgstr "Lote"
+
+#. module: stock_ext
+#: model_terms:ir.ui.view,arch_db:stock_ext.view_stock_piece_form
+#: model_terms:ir.ui.view,arch_db:stock_ext.view_stock_piece_tree
+msgid "Lot Piece"
+msgstr "Pieza de lote"
+
+#. module: stock_ext
+#: model:ir.actions.act_window,name:stock_ext.stock_piece_action
+#: model:ir.ui.menu,name:stock_ext.menu_stock_piece
+msgid "Lot Pieces"
+msgstr "Piezas de lote"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_stock_lot
+msgid "Lot/Serial"
+msgstr "Número de lote/de serie"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_piece_variant__max_weight
+msgid "Max weight"
+msgstr "Gramaje máximo"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_piece_variant__min_weight
+msgid "Min weight"
+msgstr "Gramaje mínimo"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_piece_variant
+#: model_terms:ir.ui.view,arch_db:stock_ext.view_piece_variant_tree
+msgid "Piece Variant"
+msgstr "Variante por gramaje"
+
+#. module: stock_ext
+#: model:ir.actions.act_window,name:stock_ext.piece_variant_action
+#: model:ir.ui.menu,name:stock_ext.menu_piece_variant
+msgid "Piece Variants"
+msgstr "Variantes por gramaje"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__pieces_ids
+#: model:ir.model.fields,field_description:stock_ext.field_stock_lot__pieces_ids
+#: model:ir.model.fields,field_description:stock_ext.field_stock_lot__product_ids
+#: model_terms:ir.ui.view,arch_db:stock_ext.view_production_lot_form
+msgid "Pieces"
+msgstr "Piezas de Lote"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__price_mxn
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__price_mxn
+msgid "Price MXN"
+msgstr "Precio MXN"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__price_mxn_untaxed
+msgid "Price MXN untaxed"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__price_usd
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__price_usd
+msgid "Price USD"
+msgstr "Precio USD"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_piece_variant__pricelist_id
+msgid "Pricelist"
+msgstr ""
+
+#. module: stock_ext
+#: model_terms:ir.ui.view,arch_db:stock_ext.view_production_lot_form
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__print_enabled
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__print_enabled
+msgid "Print enabled"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__print_queue
+msgid "Print queue"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.actions.server,name:stock_ext.action_piece_print_sticker
+#: model:ir.actions.server,name:stock_ext.action_print_sticker
+#: model:ir.actions.server,name:stock_ext.action_variant_print_sticker
+msgid "Print sticker"
+msgstr "Imprimir etiqueta"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_product_template
+#: model:ir.model.fields,field_description:stock_ext.field_stock_move__product_id
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__product_id
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__product_tmpl_id
+#: model:ir.model.fields,field_description:stock_ext.field_stock_quant__product_id
+#: model:ir.model.fields,field_description:stock_ext.field_stock_valuation_layer__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de producto (Línea de movimientos de existencias)"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__detailed_type
+#: model:ir.model.fields,field_description:stock_ext.field_product_template__detailed_type
+msgid "Product Type"
+msgstr "Tipo de producto"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_product_product
+msgid "Product Variant"
+msgstr "Variantes de producto"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_lot__product_qty
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_stock_quant
+msgid "Quants"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__raw_data
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__raw_data
+msgid "Raw data"
+msgstr ""
+
+#. module: stock_ext
+#: model_terms:ir.ui.view,arch_db:stock_ext.res_config_settings_view_form
+msgid "Retail"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__retail_price_untaxed
+msgid "Retail price (untaxed)"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__retail_variant
+msgid "Retail variant"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_res_config_settings__retail_variant_amount
+msgid "Retail variant amount"
+msgstr "Monto de variante retail"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_stock_return_picking_line
+msgid "Return Picking Line"
+msgstr "Línea de recolección de devolución"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__scale_created
+msgid "Scale created"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_lot__scale_read
+msgid "Scale read"
+msgstr ""
+
+#. module: stock_ext
+#: model_terms:ir.ui.view,arch_db:stock_ext.view_production_lot_form
+msgid "Scale weight detection active."
+msgstr "Lectura de balanza activa."
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_stock_piece
+msgid "Stock Piece"
+msgstr "Pieza de Lote"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_stock_valuation_layer
+msgid "Stock Valuation Layer"
+msgstr "Capa de valoración de existencias"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_lot__tax_id
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__total_cost
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__total_cost
+msgid "Total Cost"
+msgstr "Costo total"
+
+#. module: stock_ext
+#: model:ir.actions.server,name:stock_ext.action_update_piece_lot
+msgid "Update piece lot"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_piece_variant__value
+msgid "Value"
+msgstr "Valor"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_lot__variant
+msgid "Variant"
+msgstr "Variante"
+
+#. module: stock_ext
+#: model_terms:ir.ui.view,arch_db:stock_ext.res_config_settings_view_form
+msgid "Variant amount"
+msgstr "Monto de variante"
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__weight
+#: model:ir.model.fields,field_description:stock_ext.field_stock_piece__weight
+#: model:product.attribute,name:stock_ext.product_attribute_weight
+msgid "Weight"
+msgstr "Gramaje"

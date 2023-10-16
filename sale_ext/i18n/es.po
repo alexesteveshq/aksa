@@ -1,0 +1,164 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_ext
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-04 15:14+0000\n"
+"PO-Revision-Date: 2023-04-04 15:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_ext
+#: model_terms:ir.ui.view,arch_db:sale_ext.sale_ext_inherit
+msgid "<strong>Total Pieces</strong>"
+msgstr "<strong>Total de piezas</strong>"
+
+#. module: sale_ext
+#: model_terms:ir.ui.view,arch_db:sale_ext.sale_ext_inherit
+msgid "<strong>Total Weight</strong>"
+msgstr "<strong>Peso total</strong>"
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_sale_order_line__barcode
+#: model_terms:ir.ui.view,arch_db:sale_ext.sale_ext_inherit
+msgid "Barcode"
+msgstr "Código de barras"
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_lot_discount__create_uid
+#: model:ir.model.fields,field_description:sale_ext.field_pricelist_variant__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_lot_discount__create_date
+#: model:ir.model.fields,field_description:sale_ext.field_pricelist_variant__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_sale_order_line__discount
+msgid "Discount (%)"
+msgstr "Descuento (%)"
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_lot_discount__display_name
+#: model:ir.model.fields,field_description:sale_ext.field_pricelist_variant__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_lot_discount__id
+#: model:ir.model.fields,field_description:sale_ext.field_pricelist_variant__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_lot_discount____last_update
+#: model:ir.model.fields,field_description:sale_ext.field_pricelist_variant____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_lot_discount__write_uid
+#: model:ir.model.fields,field_description:sale_ext.field_pricelist_variant__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_lot_discount__write_date
+#: model:ir.model.fields,field_description:sale_ext.field_pricelist_variant__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_lot_discount__lot_id
+#: model:ir.model.fields,field_description:sale_ext.field_sale_order_line__piece_lot_it
+#: model_terms:ir.ui.view,arch_db:sale_ext.sale_ext_inherit
+msgid "Lot"
+msgstr "Lote"
+
+#. module: sale_ext
+#: model:ir.model,name:sale_ext.model_lot_discount
+msgid "Lot Discount"
+msgstr "Lote"
+
+#. module: sale_ext
+#: model_terms:ir.ui.view,arch_db:sale_ext.view_order_form
+msgid "Lot Discounts"
+msgstr "Descuentos de lote"
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_sale_order__lot_discount_ids
+msgid "Lot discount"
+msgstr "Descuento de lote"
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_pricelist_variant__max_weight
+msgid "Max weight"
+msgstr "Gramaje máximo"
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_pricelist_variant__min_weight
+msgid "Min weight"
+msgstr "Gramaje mínimo"
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_lot_discount__order_id
+msgid "Order"
+msgstr "Orden"
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_sale_order_line__piece_id
+msgid "Piece"
+msgstr "Pieza"
+
+#. module: sale_ext
+#: model:ir.model,name:sale_ext.model_product_pricelist
+#: model:ir.model.fields,field_description:sale_ext.field_pricelist_variant__pricelist_id
+msgid "Pricelist"
+msgstr "Lista de precios"
+
+#. module: sale_ext
+#: model:ir.model,name:sale_ext.model_pricelist_variant
+msgid "Pricelist Variant"
+msgstr ""
+
+#. module: sale_ext
+#: model:ir.model,name:sale_ext.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "Unidad de medida del producto"
+
+#. module: sale_ext
+#: model:ir.model,name:sale_ext.model_sale_order
+msgid "Sales Order"
+msgstr "Orden de venta"
+
+#. module: sale_ext
+#: model:ir.model,name:sale_ext.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de la orden de venta"
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_lot_discount__value
+#: model:ir.model.fields,field_description:sale_ext.field_pricelist_variant__value
+msgid "Value"
+msgstr "Valor"
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_product_pricelist__variant_ids
+msgid "Variants"
+msgstr "Variantes"
+
+#. module: sale_ext
+#: model:ir.model.fields,field_description:sale_ext.field_sale_order_line__weight
+#: model_terms:ir.ui.view,arch_db:sale_ext.sale_ext_inherit
+msgid "Weight"
+msgstr "Gramaje"

@@ -1,0 +1,15 @@
+<odoo>
+    <record id="product_normal_form_view_ext" model="ir.ui.view">
+        <field name="name">product.product.form.ext</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='barcode']" position="after">
+                <field name="lot_id"/>
+                <field name="raw_data"/>
+                <field name="price_usd"/>
+                <field name="price_mxn"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

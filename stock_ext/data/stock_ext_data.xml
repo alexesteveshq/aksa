@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_piece_seq" model="ir.sequence">
+        <field name="name">Stock Piece Sequence</field>
+        <field name="code">stock_ext.stock_piece</field>
+        <field name="prefix">P</field>
+        <field name="padding">5</field>
+    </record>
+
+    <record id="product_category_piece" model="product.category">
+        <field name="name">Piece</field>
+    </record>
+
+    <record id="product_attribute_weight" model="product.attribute">
+        <field name="name">Weight</field>
+    </record>
+</odoo>
