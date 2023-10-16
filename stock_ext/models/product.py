@@ -60,7 +60,7 @@ class ProductProduct(models.Model):
         for piece in result:
             if piece.scale_created:
                 piece.name = piece.barcode
-                piece.category_id = self.env.ref('stock_ext.product_category_piece')
+                piece.categ_id = self.env.ref('stock_ext.product_category_piece')
                 self.env['stock.quant'].create({
                     'product_id': piece.id,
                     'quantity': 1,
