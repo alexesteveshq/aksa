@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sale_ext_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//th[@name='th_description']" position="after">
+            <th name="th_lot" class="text-start">Lot</th>
+            <th name="th_barcode" class="text-start">Barcode</th>
+            <th name="th_weight" class="text-start">Weight</th>
+        </xpath>
+        <xpath expr="//td[@name='td_name']" position="after">
+            <td name="td_lot"><span t-field="line.piece_lot_it"/></td>
+            <td name="td_barcode"><span t-field="line.barcode"/></td>
+            <td name="td_weight"><span t-field="line.weight"/></td>
+        </xpath>
+        <xpath expr="//t[@t-call='account.document_tax_totals']" position="before">
+            <tr class="border-black">
+                <td><strong>Total Pieces</strong></td>
+                <td class="text-end">
+                    <span t-esc="len(doc.order_line)"/>
+                </td>
+            </tr>
+            <tr class="border-black">
+                <td><strong>Total Weight</strong></td>
+                <td class="text-end">
+                    <span t-esc="round(sum(doc.order_line.mapped('weight')), 2)"/>
+                </td>
+            </tr>
+        </xpath>
+    </template>
+</odoo>

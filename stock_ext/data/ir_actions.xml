@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_print_sticker" model="ir.actions.server">
+        <field name="name">Print sticker</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_stock_move_line"/>
+        <field name="binding_model_id" ref="model_stock_move_line" />
+        <field name="state">code</field>
+        <field name="code">records.print_sticker_retail()</field>
+    </record>
+
+    <record id="action_variant_print_sticker" model="ir.actions.server">
+        <field name="name">Print sticker</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_product_product"/>
+        <field name="binding_model_id" ref="model_product_product" />
+        <field name="state">code</field>
+        <field name="code">records.print_sticker_wholesale()</field>
+    </record>
+</odoo>

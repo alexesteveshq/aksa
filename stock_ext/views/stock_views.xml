@@ -1,0 +1,88 @@
+<odoo>
+    <record id="view_stock_move_line_detailed_operation_tree_inherit" model="ir.ui.view">
+        <field name="name">stock.move.line.operations.tree.inherit</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_stock_move_line_detailed_operation_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='package_id']" position="after">
+                <field name="product_barcode"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_move_line_tree" model="ir.ui.view">
+        <field name="name">stock.move.line.tree.inherit</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_move_line_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='package_id']" position="after">
+                <field name="product_barcode"/>
+            </xpath>
+        </field>
+    </record>
+
+   <record id="view_production_lot_form" model="ir.ui.view">
+        <field name="name">stock.production.lot.form.ext</field>
+        <field name="model">stock.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" postion="before">
+                <button name="calculate_lot_price" icon="fa-cubes" string="Calculate Weight" type="object" class="btn-primary"/>
+            </xpath>
+            <xpath expr="//div[hasclass('oe_button_box')]" postion="after">
+                <field name="scale_read" invisible="1"/>
+                <div class="alert alert-warning text-left" role="alert" attrs="{'invisible': [('scale_read', '=', False)]}">
+                    Scale weight detection active.
+                </div>
+            </xpath>
+            <xpath expr="//page[@name='description']" position="before">
+                <page string="Pieces" name="pieces">
+                    <field nolabel="1" name="product_ids">
+                        <tree editable="bottom" default_order="barcode asc">
+                            <field name="product_label_id"/>
+                            <field name="name"/>
+                            <field name="barcode" style="width:20%"/>
+                            <field name="weight"/>
+                            <field name="cost_usd" string="Cost 3"/>
+                            <field name="price_usd" force_save="1"/>
+                            <field name="price_mxn" force_save="1"/>
+                            <button name="print_sticker" type="object" string="Print" class="btn-primary"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="//field[@name='ref']/.." position="after">
+                <group>
+                    <field name="tax_id"/>
+                    <field name="acquisition_date"/>
+                    <field name="import_cost"/>
+                    <field name="variant"/>
+                    <field name="purchase_cost"/>
+                    <field name="cost_2"/>
+                    <field name="additional_usd"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_production_lot_tree" model="ir.ui.view">
+        <field name="name">stock.production.lot.tree.ext</field>
+        <field name="model">stock.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_tree"/>
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field name="tax_id"/>
+                <field name="acquisition_date"/>
+                <field name="import_cost"/>
+                <field name="variant"/>
+                <field name="purchase_cost"/>
+                <field name="cost_2"/>
+                <field name="additional_usd"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="stock.action_production_lot_form" model="ir.actions.act_window">
+        <field name="view_mode">tree,form,pivot</field>
+    </record>
+</odoo>
