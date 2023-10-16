@@ -51,6 +51,11 @@
                     </field>
                 </page>
             </xpath>
+            <xpath expr="//field[@name='ref']" position="after">
+                <field name="piece_qty"/>
+                <field name="piece_weight"/>
+                <field name="total_usd"/>
+            </xpath>
             <xpath expr="//field[@name='ref']/.." position="after">
                 <group>
                     <field name="tax_id"/>
@@ -76,6 +81,9 @@
                 <field name="import_cost"/>
                 <field name="variant"/>
                 <field name="purchase_cost"/>
+                <field name="piece_qty"/>
+                <field name="piece_weight"/>
+                <field name="total_usd"/>
                 <field name="cost_2"/>
                 <field name="additional_usd"/>
             </field>
