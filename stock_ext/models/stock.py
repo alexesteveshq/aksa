@@ -26,7 +26,7 @@ class StockLot(models.Model):
             piece.piece_qty = len(piece.product_ids)
 
     @api.depends('product_ids', 'product_ids.weight')
-    def _compute_piece_qty(self):
+    def _compute_piece_weight(self):
         for piece in self:
             piece.piece_weight = sum(piece.product_ids.mapped('weight'))
 
