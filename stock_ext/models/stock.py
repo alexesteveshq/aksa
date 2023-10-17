@@ -30,10 +30,10 @@ class StockLot(models.Model):
         for piece in self:
             piece.piece_weight = sum(piece.product_ids.mapped('weight'))
 
-    @api.depends('product_ids', 'product_ids.price_usd')
+    @api.depends('product_ids', 'product_ids.cost_usd')
     def _compute_total_usd(self):
         for piece in self:
-            piece.total_usd = sum(piece.product_ids.mapped('price_usd'))
+            piece.total_usd = sum(piece.product_ids.mapped('cost_usd'))
 
     @api.depends('purchase_cost', 'import_cost')
     def _compute_cost_2(self):
