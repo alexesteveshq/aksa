@@ -11,6 +11,9 @@
             <td name="td_barcode"><span t-field="line.barcode"/></td>
             <td name="td_weight"><span t-field="line.weight"/></td>
         </xpath>
+        <xpath expr="//td[@name='td_name']" position="replace">
+            <td name="td_name"><span t-field="line.product_id.name"/></td>
+        </xpath>
         <xpath expr="//t[@t-call='account.document_tax_totals']" position="before">
             <tr class="border-black">
                 <td><strong>Total Pieces</strong></td>
