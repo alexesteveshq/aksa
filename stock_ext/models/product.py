@@ -46,15 +46,6 @@ class ProductProduct(models.Model):
             currency_mxn = self.env['res.currency'].browse(self.env.ref('base.USD').id)
             self.standard_price = self.cost_usd * currency_mxn.inverse_rate
 
-    def name_get(self):
-        res = []
-        for product in self:
-            name = product.name
-            if product.scale_created:
-                name = "%s (%s) |%s|" % (product.name, product.weight or '0.0', product.barcode)
-            res += [(product.id, name)]
-        return res
-
     @api.model_create_multi
     def create(self, vals_list):
         result = super(ProductProduct, self).create(vals_list)
