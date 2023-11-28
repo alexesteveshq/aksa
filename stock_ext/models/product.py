@@ -35,6 +35,7 @@ class ProductProduct(models.Model):
     print_queue = fields.Integer(string='Print queue')
     scale_created = fields.Boolean(string='Scale created')
     quant_create = fields.Boolean(string='Quant create')
+    gram_retail_calculation = fields.Boolean(string='Gram retail calculation', default=True)
 
     @api.onchange('product_label_id')
     def onchange_product_label_id(self):
