@@ -12,4 +12,8 @@
             </xpath>
         </field>
     </record>
+
+    <record id="stock.stock_product_normal_action" model="ir.actions.act_window">
+        <field name="view_mode">tree,form,kanban,pivot</field>
+    </record>
 </odoo>
