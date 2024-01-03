@@ -81,9 +81,9 @@
                 <field name="import_cost"/>
                 <field name="variant"/>
                 <field name="purchase_cost"/>
-                <field name="piece_qty"/>
-                <field name="piece_weight"/>
-                <field name="total_usd"/>
+                <field name="piece_qty" sum="Piece qty"/>
+                <field name="piece_weight" sum="Piece weight"/>
+                <field name="total_usd" sum="Total USD"/>
                 <field name="cost_2"/>
                 <field name="additional_usd"/>
             </field>
