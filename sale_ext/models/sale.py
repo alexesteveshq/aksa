@@ -19,6 +19,11 @@ class SaleOrderLine(models.Model):
     avg_price_calc = fields.Float(string='Avg. Price calc')
     discount = fields.Float()
 
+    def _convert_to_tax_base_line_dict(self):
+        result = super(SaleOrderLine, self)._convert_to_tax_base_line_dict()
+        result['weight'] = self.weight
+        return result
+
     @api.onchange('avg_price_calc')
     def onchange_avg_price_calc(self):
         for line in self:

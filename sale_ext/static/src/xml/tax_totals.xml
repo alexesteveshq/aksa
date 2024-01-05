@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <t t-name="TaxTotalsField" t-inherit="account.TaxTotalsField" t-inherit-mode="extension" owl="1">
+        <xpath expr="//table[hasclass('oe_right')]//tr[1]" position="before">
+            <tr>
+                <td class="o_td_label">
+                    <label class="o_form_label o_tax_total_label">Total weight</label>
+                </td>
+                <td>
+                    <span style="white-space: nowrap; font-weight: bold;" t-esc="totals.weight"/>
+                </td>
+            </tr>
+        </xpath>
+    </t>
+</templates>
