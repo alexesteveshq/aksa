@@ -2,7 +2,7 @@
 <templates>
     <t t-name="TaxTotalsField" t-inherit="account.TaxTotalsField" t-inherit-mode="extension" owl="1">
         <xpath expr="//table[hasclass('oe_right')]//tr[1]" position="before">
-            <tr>
+            <tr t-if="totals.weight">
                 <td class="o_td_label">
                     <label class="o_form_label o_tax_total_label">Total weight</label>
                 </td>
