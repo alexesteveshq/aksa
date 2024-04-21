@@ -44,6 +44,7 @@ class BalanceAmountsWizard(models.TransientModel):
                             'pricelist_id': pricelist.id,
                             'session_id': day_orders[0].session_id.id,
                             'seller_id': seller.id,
+                            'pos_reference': 'System difference %s' % date.date(),
                             'name': "%s/System difference/%s" % (self.env.company.name, date.date()),
                             'lines': [(0, 0, {
                                 'name': product.name,
