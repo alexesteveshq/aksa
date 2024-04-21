@@ -39,13 +39,14 @@ class BalanceAmountsWizard(models.TransientModel):
                     cell_total = self.format_number(row[1])
                     diff = (orders_total - cell_total) * -1
                     lines_diff = diff + (orders_total - sum(day_orders.mapped('lines.amount_currency')))
+                    order_seq = self.env['ir.sequence'].next_by_code('pos.order')
                     if diff or lines_diff:
                         self.env['pos.order'].create({
                             'pricelist_id': pricelist.id,
                             'session_id': day_orders[0].session_id.id,
                             'seller_id': seller.id,
-                            'pos_reference': 'System difference %s' % date.date(),
-                            'name': "%s/System difference/%s" % (self.env.company.name, date.date()),
+                            'pos_reference': 'Diff %s' % order_seq,
+                            'name': "%s (System difference)" % order_seq,
                             'lines': [(0, 0, {
                                 'name': product.name,
                                 'product_id': product.id,
