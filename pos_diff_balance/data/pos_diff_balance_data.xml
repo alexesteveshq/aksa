@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_product_system_difference" model="product.product">
+        <field name="name">System difference</field>
+        <field name="default_code">SYSTEM_DIFF</field>
+        <field name="sale_ok" eval="False"/>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+    </record>
+
+    <record id="res_partner_system_difference" model="res.partner">
+        <field name="name">System difference</field>
+    </record>
+</odoo>
