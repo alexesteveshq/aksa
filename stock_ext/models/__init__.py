@@ -7,3 +7,4 @@ from . import stock_picking_return
 from . import stock_quant
 from . import stock_valuation_layer
 from . import product_label
+from . import stock_picking

@@ -83,15 +83,18 @@ class ProductProduct(models.Model):
             piece.list_price = piece.cost_usd * (piece.lot_id.variant or 1) * currency_mxn.inverse_rate
 
     def print_sticker(self, print_enabled=True):
-        manager = LabelManager()
-        data = {'code': self.barcode or "",
-                'product': self.name,
-                'weight': self.weight,
-                'price_usd': str(round(self.price_usd)),
-                'price_mxn': str(round(self.price_mxn))}
-        label = manager.generate_label_data(data)
-        self.write({'raw_data': label.dumpZPL(),
-                    'print_enabled': print_enabled,
+        if not self.raw_data:
+            manager = LabelManager()
+            data = {'code': self.barcode or "",
+                    'product': self.name,
+                    'weight': self.weight,
+                    'price_usd': str(round(self.price_usd)),
+                    'price_mxn': str(round(self.price_mxn))}
+            data.update({'price_usd': str(round(self.retail_price_untaxed_usd * 1.16)),
+                         'price_mxn': str(round(self.retail_price_untaxed * 1.16))})
+            label = manager.generate_label_data(data)
+            self.write({'raw_data': label.dumpZPL()})
+        self.write({'print_enabled': print_enabled,
                     'print_queue': int(self.qty_available)})
 
     def print_sticker_wholesale(self):
