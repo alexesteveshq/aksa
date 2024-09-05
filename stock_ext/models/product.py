@@ -90,8 +90,6 @@ class ProductProduct(models.Model):
                     'weight': self.weight,
                     'price_usd': str(round(self.price_usd)),
                     'price_mxn': str(round(self.price_mxn))}
-            data.update({'price_usd': str(round(self.retail_price_untaxed_usd * 1.16)),
-                         'price_mxn': str(round(self.retail_price_untaxed * 1.16))})
             label = manager.generate_label_data(data)
             self.write({'raw_data': label.dumpZPL()})
         self.write({'print_enabled': print_enabled,
