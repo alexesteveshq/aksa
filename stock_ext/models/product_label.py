@@ -8,3 +8,4 @@ class StockProductLabel(models.Model):
     _description = 'Product Label'
 
     name = fields.Char(string='Name')
+    category_id = fields.Many2one('stock.product.category', string='Category')

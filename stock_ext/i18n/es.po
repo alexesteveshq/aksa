@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-16 22:48+0000\n"
-"PO-Revision-Date: 2023-10-16 22:48+0000\n"
+"POT-Creation-Date: 2024-10-17 22:26+0000\n"
+"PO-Revision-Date: 2024-10-17 22:26+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -56,6 +56,12 @@ msgid "Calculate Weight"
 msgstr "Calcular Peso"
 
 #. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__category_id
+#: model:ir.model.fields,field_description:stock_ext.field_stock_product_label__category_id
+msgid "Category"
+msgstr "Categoría"
+
+#. module: stock_ext
 #: model:ir.model.fields,field_description:stock_ext.field_product_product__standard_price
 msgid "Cost"
 msgstr "Coste"
@@ -81,21 +87,30 @@ msgid "Cost USD"
 msgstr ""
 
 #. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_product_product__cost_retail_calculation
+msgid "Cost retail calculation"
+msgstr ""
+
+#. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_product_category__create_uid
 #: model:ir.model.fields,field_description:stock_ext.field_stock_product_label__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_product_category__create_date
 #: model:ir.model.fields,field_description:stock_ext.field_stock_product_label__create_date
 msgid "Created on"
 msgstr ""
 
 #. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_product_category__display_name
 #: model:ir.model.fields,field_description:stock_ext.field_stock_product_label__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_product_category__id
 #: model:ir.model.fields,field_description:stock_ext.field_stock_product_label__id
 msgid "ID"
 msgstr ""
@@ -128,16 +143,19 @@ msgstr ""
 "Número de artículo internacional usado para la identificación de producto."
 
 #. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_product_category____last_update
 #: model:ir.model.fields,field_description:stock_ext.field_stock_product_label____last_update
 msgid "Last Modified on"
 msgstr ""
 
 #. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_product_category__write_uid
 #: model:ir.model.fields,field_description:stock_ext.field_stock_product_label__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_product_category__write_date
 #: model:ir.model.fields,field_description:stock_ext.field_stock_product_label__write_date
 msgid "Last Updated on"
 msgstr ""
@@ -158,8 +176,14 @@ msgid "Lot/Serial"
 msgstr "Número de lote/de serie"
 
 #. module: stock_ext
+#: model:ir.model.fields,field_description:stock_ext.field_stock_product_category__name
 #: model:ir.model.fields,field_description:stock_ext.field_stock_product_label__name
 msgid "Name"
+msgstr ""
+
+#. module: stock_ext
+#: model_terms:ir.ui.view,arch_db:stock_ext.view_production_lot_tree
+msgid "Piece qty"
 msgstr ""
 
 #. module: stock_ext
@@ -169,6 +193,7 @@ msgstr "Cantidad de piezas"
 
 #. module: stock_ext
 #: model:ir.model.fields,field_description:stock_ext.field_stock_lot__piece_weight
+#: model_terms:ir.ui.view,arch_db:stock_ext.view_production_lot_tree
 msgid "Piece weight"
 msgstr "Gramaje total"
 
@@ -204,6 +229,7 @@ msgid "Print queue"
 msgstr ""
 
 #. module: stock_ext
+#: model:ir.actions.server,name:stock_ext.action_picking_print_sticker
 #: model:ir.actions.server,name:stock_ext.action_print_sticker
 #: model:ir.actions.server,name:stock_ext.action_variant_print_sticker
 msgid "Print sticker"
@@ -216,6 +242,11 @@ msgstr "Imprimir etiqueta"
 #: model:ir.model.fields,field_description:stock_ext.field_stock_valuation_layer__product_id
 msgid "Product"
 msgstr "Producto"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_stock_product_category
+msgid "Product Category"
+msgstr ""
 
 #. module: stock_ext
 #: model:ir.model,name:stock_ext.model_stock_product_label
@@ -305,8 +336,14 @@ msgstr "Costo total"
 
 #. module: stock_ext
 #: model:ir.model.fields,field_description:stock_ext.field_stock_lot__total_usd
+#: model_terms:ir.ui.view,arch_db:stock_ext.view_production_lot_tree
 msgid "Total USD"
 msgstr "Valor USD"
+
+#. module: stock_ext
+#: model:ir.model,name:stock_ext.model_stock_picking
+msgid "Transfer"
+msgstr "Traslado"
 
 #. module: stock_ext
 #: model:ir.model.fields,field_description:stock_ext.field_stock_lot__variant

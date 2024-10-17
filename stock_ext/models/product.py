@@ -23,6 +23,7 @@ class ProductProduct(models.Model):
     barcode = fields.Char(default=_default_piece_barcode, tracking=True)
     raw_data = fields.Char(string='Raw data')
     product_label_id = fields.Many2one('stock.product.label', string='Product label')
+    category_id = fields.Many2one(related='product_label_id.category_id', store=True)
     standard_price = fields.Float(compute='_compute_standard_price', store=True, readonly=False,
                                   tracking=True, company_dependent=True,)
     total_cost = fields.Float(string='Total Cost', compute='_compute_standard_price', store=True)
@@ -36,6 +37,11 @@ class ProductProduct(models.Model):
     scale_created = fields.Boolean(string='Scale created')
     quant_create = fields.Boolean(string='Quant create')
     cost_retail_calculation = fields.Boolean(string='Cost retail calculation')
+
+    @api.onchange('category_id')
+    def onchange_category_id(self):
+        if self.category_id:
+            self.product_label_id.category_id = self.category_id
 
     @api.onchange('product_label_id')
     def onchange_product_label_id(self):
