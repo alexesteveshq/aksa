@@ -1,10 +1,21 @@
 # -*- coding: utf-8 -*-
 
-from odoo import fields, models, api
+from odoo import fields, models, api, _
+from odoo.exceptions import UserError
 
 
 class SaleOrder(models.Model):
-    _inherit = 'sale.order'
+    _inherit = ['sale.order', 'barcodes.barcode_events_mixin']
+
+    def on_barcode_scanned(self, barcode=''):
+        piece = self.env['product.product'].search([('barcode', '=', barcode.upper())], limit=1)
+        if piece.qty_available == 0:
+            raise UserError(_('Scanned piece with barcode %s is not available.') % barcode)
+        if piece:
+            self.order_line = [(0, 0, {'product_id': piece.id,
+                                       'product_uom_qty': 1})]
+        else:
+            raise UserError(_('Scanned piece with barcode %s does not exist.') % barcode)
 
     lot_discount_ids = fields.One2many('lot.discount', 'order_id', string='Lot discount')
 
