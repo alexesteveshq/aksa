@@ -5,6 +5,7 @@ from odoo.exceptions import UserError
 
 
 class SaleOrder(models.Model):
+    _name = 'sale.order'
     _inherit = ['sale.order', 'barcodes.barcode_events_mixin']
 
     def on_barcode_scanned(self, barcode=''):

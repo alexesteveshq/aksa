@@ -10,6 +10,7 @@
     'depends': [
         'sale',
         'stock_ext',
+        'barcodes',
     ],
     'data': [
         'views/sale_views.xml',
