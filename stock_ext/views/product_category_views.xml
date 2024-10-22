@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_stock_product_category_tree" model="ir.ui.view">
+        <field name="name">view.stock.product.category.tree</field>
+        <field name="model">stock.product.category</field>
+        <field name="arch" type="xml">
+            <tree string="Stock Categories">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="stock_product_category_action" model="ir.actions.act_window">
+        <field name="name">Stock Categories</field>
+        <field name="res_model">stock.product.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_stock_product_category"
+              action="stock_product_category_action"
+              parent="stock.menu_warehouse_config"
+              sequence="6"/>
+</odoo>

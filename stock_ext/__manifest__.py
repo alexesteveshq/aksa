@@ -20,6 +20,7 @@
         'views/product_views.xml',
         'wizard/stock_picking_return_views.xml',
         'views/stock_picking_templates.xml',
+        'views/product_category_views.xml',
         'views/stock_quant_views.xml',
     ],
     'external_dependencies': {
