@@ -23,7 +23,7 @@
                 </page>
             </xpath>
             <xpath expr="//notebook" position="after">
-                <field name="_barcode_scanned" widget="barcode_handler" invisible="1"/>
+                <field name="_barcode_scanned" widget="barcode_handler"/>
             </xpath>
         </field>
     </record>
