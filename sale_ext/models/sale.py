@@ -30,6 +30,7 @@ class SaleOrderLine(models.Model):
     average_price_gram = fields.Float(string='Avg. Price per gram', compute='_compute_average_price_gram', store=True)
     avg_price_calc = fields.Float(string='Avg. Price calc')
     discount = fields.Float()
+    category_id = fields.Many2one(related='product_id.category_id', store=True)
 
     def _convert_to_tax_base_line_dict(self):
         result = super(SaleOrderLine, self)._convert_to_tax_base_line_dict()
